@@ -16,6 +16,9 @@ var io = require("socket.io")(server, {
     methods: ["GET", "POST"],
   },
 });
+app.get("/", (req, res) => {
+  res.send("Socket.io server is running!");
+});
 
 var serverPort = 3001;
 
